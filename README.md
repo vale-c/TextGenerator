@@ -1,7 +1,7 @@
 ## The ALL MEATY TEXT GENERATOR
 ### A SIMPLE REACT JS APP
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Yaktocat](https://valecalabrese.github.com/screenshot.png)
 
 In the project directory, you can run:
 
