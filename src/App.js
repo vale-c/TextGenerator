@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       paras: 3,
-      textFormat: 'html',
+      textFormat: 'text',
       text: ''
     };
       this.handleParasNum = this.handleParasNum.bind(this);
@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   getSampleText(){
-    axios.get('https://baconipsum.com/api/?type=all-meat&paras='+this.state.paras+'&format='+this.state.textFormat)
+    axios.get('https://baconipsum.com/api/?type=meat-and-filler&paras='+this.state.paras+'&format='+this.state.textFormat)
       .then((response) => {
         this.setState({text: response.data}, function(){
           console.log(this.state);
@@ -48,38 +48,45 @@ class App extends Component {
   render() {
     return (
     <div className="App container">
-      <h2 className="text-center">🍖🍗The All-Meaty Text Generator🍗🍖</h2>
-      <h6 className="subtitle text-center"> A dummy React Web App</h6>
+      <h4 className="text-center"><span className="titleBreak">🍗&nbsp;The All-Meaty</span> Text Generator&nbsp;🍖</h4>
+      <h5 className="subtitle text-center">A dummy React Web Application</h5>
      <div>
-        <img src={'https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9%0A&s=12a605e13e911abdc6773f018a266369'} alt={"burger"} className="img-responsive"
-        style={{
-        height: '350',
-        width: '500',
-        marginLeft: '27%'
-      }}
+      <img src={'https://images.unsplash.com/photo-1487758608033-7780b34680ac?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=494833974c76f0d96ea91ca87f0c95c7'} alt={"bacon"} 
+           className="img-responsive" 
+           style={{
+                    display: 'block',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    height: '70%',
+                    width: '90%',
+                    borderRadius: '15px'
+          }}
        />
     </div>
        <hr />
 
         <form className="form-inline">
           <div className="form-group">
-            <label> Paragraphs:</label>
-            <Paras value={this.state.paras} onChange={this.handleParasNum} />
+            <label>How many paragraphs ?</label>
+            <span className="parasFormatSelector"><Paras value={this.state.paras} onChange={this.handleParasNum} /></span>
           </div>
        </form>
 
         <form className="form-inline">
          <div className="form-group">
-           <label> Choose your desired output format: </label>
-             <Select value={this.state.textFormat} onChange={this.changeFormat} />
+           <label>Which text format?</label>
+             <span className="textFormatSelector"><Select value={this.state.textFormat} onChange={this.changeFormat} /></span>
           </div>
         </form>
 
       <br /><br />
 
        <Output value={this.state.text} />
-       <footer className='text-center' style={{'position': 'static'}}> Made with ❤ &nbsp; by <a
-       target="blank" href='https://www.github.com/valecalabrese'>Vale</a></footer>
+       <footer className='text-center'
+       style={{
+           'position': 'static'
+         }}
+        > Made with 🥓 & &nbsp;💓 by <a target="blank" href='https://www.github.com/vale-c'>Vale</a></footer>
       </div>
     );
   }

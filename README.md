@@ -1,7 +1,10 @@
 ## The ALL MEATY TEXT GENERATOR
-### A SIMPLE REACT JS APP
+### A JUICY REACT JS APP
 
-![Image of Yaktocat](https://valecalabrese.github.com/screenshot.png)
+## A live DEMO can be found here 
+[DEMO](https://theallmeatytextgen.netlify.com)
+
+![Screenshot](https://github.com/vale-c/TheAllMeatyTextGen/blob/master/screenshot.png)
 
 In the project directory, you can run:
 

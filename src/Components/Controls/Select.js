@@ -21,9 +21,8 @@ class Select extends Component{
     return (
       <div>
        <select className='form-control' onChange={this.handleChange}>
-          <option value='html' defaultValue>html</option>
-          <option value='json'>json</option>
-          <option value='text'>text</option>
+          <option value='text' defaultValue>text</option>
+          <option value='html'>html</option>
        </select>
       </div>
     )
