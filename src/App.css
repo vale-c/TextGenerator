@@ -1,0 +1,14 @@
+
+.form-inline{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 1em 2em 2em;
+}
+  footer {
+  margin-top: 2em;
+}
+
+label {
+  padding-right: 1em;
+}
